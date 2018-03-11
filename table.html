@@ -1,0 +1,252 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+    <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+      <dl>
+<!input type="submit" value="Save">
+<!DOCTYPE html>
+<html>
+<body>
+
+<TABLE BORDER="1"    WIDTH="100%"   CELLPADDING="0" CELLSPACING="0">
+   <TR>
+      <TH COLSPAN="4"><BR><H3>1717A</H3>
+      </TH>
+   </TR>
+   <TR>
+      <TH>Subjects</TH>
+      <TH>Worksheet type</TH>
+      <TH>Price (Total)</TH>
+      <TH>Collected</TH>
+
+   <TR ALIGN="CENTER">
+      <TD>H2 Math</TD>								<!math>
+
+      <TD><!DOCTYPE html>                           <!WS>
+<html>
+<body>
+
+<form action="/action_page.php">					<!need to change>
+<input type="text"><br>
+
+</body>
+</html></TD>
+
+      <TD><!DOCTYPE html>                           <!price>
+<html>
+<body>
+
+<form action="/action_page.php">
+$ <input type="text"><br>
+
+</body>
+</html></TD>
+
+      <TD><html>                                    <!collected>
+<body>
+
+<form action="/action_page.php" method="get">
+  <input type="checkbox" >
+</form>
+
+</body>
+</html>
+</TD>
+   </TR>
+
+   <TR ALIGN="CENTER">
+   	<TD>H2 Physics</TD>								<!physics>
+      <TD><!DOCTYPE html>                       	<!WS>
+<html>
+<body>
+
+<form action="/action_page.php">					<!need to change>
+<input type="text"><br>
+
+</body>
+</html></TD>
+
+      <TD><!DOCTYPE html>                           <!price>
+<html>
+<body>
+
+<form action="/action_page.php">
+$ <input type="text"><br>
+
+</body>
+</html></TD>
+
+      <TD><html>                                    <!collected>
+<body>
+
+<form action="/action_page.php" method="get">
+  <input type="checkbox" >
+</form>
+
+</body>
+</html>
+</TD>
+   </TR>
+
+   <TR ALIGN="CENTER">
+      <TD>H2 Chem</TD>								<!chem>
+
+      <TD><!DOCTYPE html>                           <!WS>
+<html>
+<body>
+
+<form action="/action_page.php">					<!need to change>
+<input type="text"><br>
+
+</body>
+</html></TD>
+
+      <TD><!DOCTYPE html>                           <!price>
+<html>
+<body>
+
+<form action="/action_page.php">
+$ <input type="text"><br>
+
+</body>
+</html></TD>
+
+      <TD><html>                                    <!collected>
+<body>
+
+<form action="/action_page.php" method="get">
+  <input type="checkbox" >
+</form>
+
+</body>
+</html>
+</TD>
+   </TR>
+
+<TR ALIGN="CENTER">
+      <TD>H2 Comp</TD>								<!comp>
+
+      <TD><!DOCTYPE html>                           <!WS>
+<html>
+<body>
+
+<form action="/action_page.php">					<!need to change>
+<input type="text"><br>
+
+</body>
+</html></TD>
+
+      <TD><!DOCTYPE html>                           <!price>
+<html>
+<body>
+
+<form action="/action_page.php">
+$ <input type="text"><br>
+
+</body>
+</html></TD>
+
+      <TD><html>                                    <!collected>
+<body>
+
+<form action="/action_page.php" method="get">
+  <input type="checkbox" >
+</form>
+
+</body>
+</html>
+</TD>
+   </TR>
+
+<TR ALIGN="CENTER">
+      <TD>H1 Econs</TD>								<!econs>
+
+      <TD><!DOCTYPE html>                           <!WS>
+<html>
+<body>
+
+<form action="/action_page.php">					<!need to change>
+<input type="text"><br>
+
+</body>
+</html></TD>
+
+      <TD><!DOCTYPE html>                           <!price>
+<html>
+<body>
+
+<form action="/action_page.php">
+$ <input type="text"><br>
+
+</body>
+</html></TD>
+
+      <TD><html>                                    <!collected>
+<body>
+
+<form action="/action_page.php" method="get">
+  <input type="checkbox" >
+</form>
+
+</body>
+</html>
+</TD>
+   </TR>
+
+<TR ALIGN="CENTER">
+      <TD>H1 His</TD>								<!his>
+
+      <TD><!DOCTYPE html>                           <!WS>
+<html>
+<body>
+
+<form action="/action_page.php">					<!need to change>
+<input type="text"><br>
+
+</body>
+</html></TD>
+
+      <TD><!DOCTYPE html>                           <!price>
+<html>
+<body>
+
+<form action="/action_page.php">
+$ <input type="text"><br>
+
+</body>
+</html></TD>
+
+      <TD><html>                                    <!collected>
+<body>
+
+<form action="/action_page.php" method="get">
+  <input type="checkbox" >
+</form>
+
+</body>
+</html>
+</TD>
+   </TR>
+</TABLE>
+
+
+
+<form action="/action_page.php" method="get">
+<button type="submit" value="Submit">Save</button>
+<button type="reset" value="Reset">Reset</button>
+</form>
+
+</body>
+</html>
+
+      </dl>
+    </form>
+  {% endif %}
+  <ul class=entries>
+  {% for entry in entries %}
+    <li><h2>{{ entry.title }}</h2>{{ entry.text|safe }}
+  {% else %}
+    <li><em>Unbelievable.  No entries here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %}
